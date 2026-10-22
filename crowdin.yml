@@ -1,0 +1,4 @@
+files:
+  - source: /AgentNotch/Localizable.xcstrings
+    translation: /AgentNotch/Localizable.xcstrings
+    multilingual: 1

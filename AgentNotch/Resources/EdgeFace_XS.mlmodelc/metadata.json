@@ -1,0 +1,83 @@
+[
+  {
+    "metadataOutputVersion" : "3.0",
+    "shortDescription" : "EdgeFace-XS: ultra-lightweight face recognition (1.77M params, 512-d)",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1 × 512)",
+        "shortDescription" : "",
+        "shape" : "[1, 512]",
+        "name" : "var_1215",
+        "type" : "MultiArray"
+      }
+    ],
+    "storagePrecision" : "Float16",
+    "modelParameters" : [
+
+    ],
+    "author" : "Idiap (EdgeFace)",
+    "specificationVersion" : 8,
+    "mlProgramOperationTypeHistogram" : {
+      "Split" : 6,
+      "Ios17.mul" : 25,
+      "Ios16.softmax" : 3,
+      "Ios17.linear" : 86,
+      "Ios17.transpose" : 51,
+      "Ios17.matmul" : 6,
+      "Ios17.conv" : 26,
+      "Ios17.concat" : 3,
+      "Ios17.add" : 26,
+      "Ios17.realDiv" : 6,
+      "Ios16.reduceMean" : 1,
+      "Tile" : 6,
+      "Ios16.gelu" : 18,
+      "Ios16.reduceL2Norm" : 6,
+      "Ios17.maximum" : 6,
+      "Ios17.squeeze" : 9,
+      "Ios17.reshape" : 14,
+      "Ios17.layerNorm" : 26,
+      "Ios17.cast" : 1
+    },
+    "computePrecision" : "Mixed (Float16, Float32, Int32)",
+    "isUpdatable" : "0",
+    "stateSchema" : [
+
+    ],
+    "availability" : {
+      "macOS" : "14.0",
+      "tvOS" : "17.0",
+      "visionOS" : "1.0",
+      "watchOS" : "10.0",
+      "iOS" : "17.0",
+      "macCatalyst" : "17.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_mlProgram"
+    },
+    "inputSchema" : [
+      {
+        "height" : "112",
+        "colorspace" : "RGB",
+        "isOptional" : "0",
+        "width" : "112",
+        "isColor" : "1",
+        "formattedType" : "Image (Color 112 × 112)",
+        "hasSizeFlexibility" : "0",
+        "type" : "Image",
+        "shortDescription" : "",
+        "name" : "faceImage"
+      }
+    ],
+    "userDefinedMetadata" : {
+      "com.github.apple.coremltools.conversion_date" : "2026-02-25",
+      "com.github.apple.coremltools.source" : "torch==2.10.0",
+      "com.github.apple.coremltools.version" : "9.0",
+      "com.github.apple.coremltools.source_dialect" : "TorchScript"
+    },
+    "generatedClassName" : "EdgeFace_XS",
+    "method" : "predict"
+  }
+]

@@ -1,0 +1,24 @@
+name: Build and checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Session detection checks
+        run: ./scripts/test-agent-sessions.sh
+      - name: Face recognition checks
+        run: ./scripts/test-face-recognition.sh
+      - name: Build
+        run: |
+          xcodebuild -resolvePackageDependencies -project AgentNotch.xcodeproj -scheme AgentNotch
+          ./scripts/build-local.sh

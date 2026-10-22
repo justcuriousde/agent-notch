@@ -1,0 +1,5 @@
+Meet AgentNotch — a macOS notch companion for Claude and Codex.
+
+Live chat status, inline task progress, and a gentle “Your turn” when an agent needs you. Music controls stay right there too.
+
+Built with SwiftUI. Open-source release coming soon.
